@@ -18,24 +18,38 @@ namespace TDDTestRun_Tests
         }
 
         [Test]
-        public void FirstFractionZero_SecondNonZero()
+        public void FirstAddendZero_SecondNonZero()
         {
             var result = new Fraction(3).Plus(new Fraction(0));
             Assert.AreEqual(3, result.IntValue());
         }
 
         [Test]
-        public void FirstFractionNonZero_SecondZero()
+        public void FirstAddendNonZero_SecondZero()
         {
             var result = new Fraction(0).Plus(new Fraction(4));
             Assert.AreEqual(4, result.IntValue());
         }
 
         [Test]
-        public void BothFractionsNonZero()
+        public void BothAddendsNonZero()
         {
             var result = new Fraction(3).Plus(new Fraction(9));
             Assert.AreEqual(12, result.IntValue());
+        }
+
+        [Test]
+        public void FirstAddendNegative_SecondPositive()
+        {
+            var result = new Fraction(-4).Plus(new Fraction(1));
+            Assert.AreEqual(-3, result.IntValue());
+        }
+
+        [Test]
+        public void FirstAddendPositive_SecondNegative()
+        {
+            var result = new Fraction(1).Plus(new Fraction(-5));
+            Assert.AreEqual(-4, result.IntValue());
         }
     }
 }
