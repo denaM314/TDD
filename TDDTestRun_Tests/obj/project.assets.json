@@ -1225,6 +1225,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
+      },
+      "TDDTestRun/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/TDDTestRun.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TDDTestRun.dll": {}
+        }
       }
     }
   },
@@ -4568,12 +4578,18 @@
         "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xmldocument.nuspec"
       ]
+    },
+    "TDDTestRun/1.0.0": {
+      "type": "project",
+      "path": "../TDDTestRun/TDDTestRun.csproj",
+      "msbuildProject": "../TDDTestRun/TDDTestRun.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.NET.Test.Sdk >= 16.4.0",
       "NUnit3TestAdapter >= 3.15.1",
+      "TDDTestRun >= 1.0.0",
       "nunit >= 3.12.0"
     ]
   },
@@ -4584,11 +4600,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Denis Mrzljak\\Source\\Repos\\TDDTestRun\\TDDTestRun_Tests\\TDDTestRun_Tests.csproj",
+      "projectUniqueName": "C:\\Users\\Denis Mrzljak\\Source\\Repos\\TDD\\TDDTestRun_Tests\\TDDTestRun_Tests.csproj",
       "projectName": "TDDTestRun_Tests",
-      "projectPath": "C:\\Users\\Denis Mrzljak\\Source\\Repos\\TDDTestRun\\TDDTestRun_Tests\\TDDTestRun_Tests.csproj",
+      "projectPath": "C:\\Users\\Denis Mrzljak\\Source\\Repos\\TDD\\TDDTestRun_Tests\\TDDTestRun_Tests.csproj",
       "packagesPath": "C:\\Users\\Denis Mrzljak\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Denis Mrzljak\\Source\\Repos\\TDDTestRun\\TDDTestRun_Tests\\obj\\",
+      "outputPath": "C:\\Users\\Denis Mrzljak\\Source\\Repos\\TDD\\TDDTestRun_Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4606,7 +4622,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Denis Mrzljak\\Source\\Repos\\TDD\\TDDTestRun\\TDDTestRun.csproj": {
+              "projectPath": "C:\\Users\\Denis Mrzljak\\Source\\Repos\\TDD\\TDDTestRun\\TDDTestRun.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

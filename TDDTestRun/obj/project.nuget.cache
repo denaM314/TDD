@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "z1lMZiGBTwSyQiHpYTzloDE6OE5RLzwHF+0guXKLBBa7bwylp5cBKVeu+muiVOg8u1gPPNzW2huSGWLxlUfZFg==",
+  "dgSpecHash": "NvX/LDRSvPjRd+9WcrrisuAIMXs+G6Ec7EYU7xs+4GA8old45MbqPndaPMSaLUyNFrCn52jKvmiuyjrkaHwIxw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Denis Mrzljak\\Source\\Repos\\TDDTestRun\\TDDTestRun\\TDDTestRun.csproj",
+  "projectFilePath": "C:\\Users\\Denis Mrzljak\\Source\\Repos\\TDD\\TDDTestRun\\TDDTestRun.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

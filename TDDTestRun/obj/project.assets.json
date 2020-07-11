@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Denis Mrzljak\\Source\\Repos\\TDDTestRun\\TDDTestRun\\TDDTestRun.csproj",
+      "projectUniqueName": "C:\\Users\\Denis Mrzljak\\Source\\Repos\\TDD\\TDDTestRun\\TDDTestRun.csproj",
       "projectName": "TDDTestRun",
-      "projectPath": "C:\\Users\\Denis Mrzljak\\Source\\Repos\\TDDTestRun\\TDDTestRun\\TDDTestRun.csproj",
+      "projectPath": "C:\\Users\\Denis Mrzljak\\Source\\Repos\\TDD\\TDDTestRun\\TDDTestRun.csproj",
       "packagesPath": "C:\\Users\\Denis Mrzljak\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Denis Mrzljak\\Source\\Repos\\TDDTestRun\\TDDTestRun\\obj\\",
+      "outputPath": "C:\\Users\\Denis Mrzljak\\Source\\Repos\\TDD\\TDDTestRun\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

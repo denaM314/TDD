@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NQoLunAXMXlssJOlausb7pOgxO67j9rv8lxdd6pdKB8uHGiejluX+jYbjq7UxHAfxjMzTCmB/3NYgM/zWri1MQ==",
+  "dgSpecHash": "d13OiW+JfT/dB9HbxHIhE5GiRyf5h/2FVWUtolEElGfrkYw//mzLa6LFBxM9zSs7VHMEiULZAcFQeQvCBgVFVw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Denis Mrzljak\\Source\\Repos\\TDDTestRun\\TDDTestRun_Tests\\TDDTestRun_Tests.csproj",
+  "projectFilePath": "C:\\Users\\Denis Mrzljak\\Source\\Repos\\TDD\\TDDTestRun_Tests\\TDDTestRun_Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Denis Mrzljak\\.nuget\\packages\\microsoft.codecoverage\\16.4.0\\microsoft.codecoverage.16.4.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
