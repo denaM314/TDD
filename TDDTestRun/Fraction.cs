@@ -21,11 +21,10 @@ namespace TDDTestRun
 
         public Fraction Plus(Fraction fraction)
         {
-            int leastCommonDenominator = this.Denominator;
             int firstAddendNumerator = this.Numerator;
             int secondAddendNumerator = fraction.Numerator;
+            int leastCommonDenominator = LeastCommonMultiple(this.Denominator, fraction.Denominator);
 
-            leastCommonDenominator = LeastCommonMultiple(this.Denominator, fraction.Denominator);
             firstAddendNumerator *= (int)(leastCommonDenominator / this.Denominator);
             secondAddendNumerator *= (int)(leastCommonDenominator / fraction.Denominator);
 
