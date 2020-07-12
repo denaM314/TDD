@@ -21,36 +21,15 @@ namespace TDDTestRun
 
         public Fraction Plus(Fraction fraction)
         {
-            if(this.Denominator == fraction.Denominator)
-                return new Fraction(fraction.Numerator + this.Numerator, this.Denominator);
+            int resultDenominator = this.Denominator;
+            int firstAddendNumerator = this.Numerator;
+            int secondAddendNumerator = fraction.Numerator;
 
-            int sumDenominator;
-            int firstAddendNumerator;
-            int secondAddendNumerator;
+            resultDenominator = LeastCommonMultiple(this.Denominator, fraction.Denominator);
+            firstAddendNumerator *= (int)(resultDenominator / this.Denominator);
+            secondAddendNumerator *= (int)(resultDenominator / fraction.Denominator);
 
-            if (this.Denominator > fraction.Denominator && this.Denominator%fraction.Denominator == 0)
-            {
-                int multiplier = this.Denominator / fraction.Denominator;
-                sumDenominator = fraction.Denominator * multiplier;
-                secondAddendNumerator = fraction.Numerator*multiplier;
-
-                return new Fraction(secondAddendNumerator + this.Numerator, sumDenominator);
-            }
-
-            if (fraction.Denominator > this.Denominator && fraction.Denominator % this.Denominator == 0)
-            {
-                int multiplier = fraction.Denominator / this.Denominator;
-                sumDenominator = this.Denominator * multiplier;
-                firstAddendNumerator = this.Numerator * multiplier;
-
-                return new Fraction(firstAddendNumerator + fraction.Numerator, sumDenominator);
-            }
-
-            sumDenominator = this.Denominator * fraction.Denominator;
-            firstAddendNumerator = this.Numerator * fraction.Denominator;
-            secondAddendNumerator = fraction.Numerator * this.Denominator;
-
-            return new Fraction(firstAddendNumerator + secondAddendNumerator, sumDenominator);
+            return new Fraction(firstAddendNumerator + secondAddendNumerator, resultDenominator);
         }
 
         //Euclids GCM Algorithm
