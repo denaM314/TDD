@@ -21,15 +21,15 @@ namespace TDDTestRun
 
         public Fraction Plus(Fraction fraction)
         {
-            int resultDenominator = this.Denominator;
+            int leastCommonDenominator = this.Denominator;
             int firstAddendNumerator = this.Numerator;
             int secondAddendNumerator = fraction.Numerator;
 
-            resultDenominator = LeastCommonMultiple(this.Denominator, fraction.Denominator);
-            firstAddendNumerator *= (int)(resultDenominator / this.Denominator);
-            secondAddendNumerator *= (int)(resultDenominator / fraction.Denominator);
+            leastCommonDenominator = LeastCommonMultiple(this.Denominator, fraction.Denominator);
+            firstAddendNumerator *= (int)(leastCommonDenominator / this.Denominator);
+            secondAddendNumerator *= (int)(leastCommonDenominator / fraction.Denominator);
 
-            return new Fraction(firstAddendNumerator + secondAddendNumerator, resultDenominator);
+            return new Fraction(firstAddendNumerator + secondAddendNumerator, leastCommonDenominator);
         }
 
         //Euclids GCM Algorithm
