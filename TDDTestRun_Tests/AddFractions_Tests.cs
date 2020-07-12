@@ -100,5 +100,26 @@ namespace TDDTestRun_Tests
             var result = new Fraction(3, 5).Plus(new Fraction(2, 5));
             Assert.IsTrue(result.Equals(new Fraction(1)));
         }
+
+        [Test]
+        public void FirstAddendNegative_AlreadyReduced()
+        {
+            var result = new Fraction(-1, 3).Plus(new Fraction(2, 3));
+            Assert.IsTrue(result.Equals(new Fraction(1, 3)));
+        }
+
+        [Test]
+        public void SecondAddendNegative_AlreadyReduced()
+        {
+            var result = new Fraction(2, 5).Plus(new Fraction(-1, 5));
+            Assert.IsTrue(result.Equals(new Fraction(1, 5)));
+        }
+
+        [Test]
+        public void FirstAddendNegative_NegativeResult()
+        {
+            var result = new Fraction(-3, 5).Plus(new Fraction(1, 5));
+            Assert.IsTrue(result.Equals(new Fraction(-2, 5)));
+        }
     }
 }
