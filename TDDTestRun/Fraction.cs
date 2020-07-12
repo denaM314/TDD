@@ -19,17 +19,10 @@ namespace TDDTestRun
             if (denominator == 0)
                 throw new ArgumentOutOfRangeException("Cannot have zero as the denominator");
 
-            if (numerator == 0)
-            {
-                this.Numerator = numerator;
-                this.Denominator = denominator;
-            }
-            else
-            {
-                this.Numerator = numerator / GreatestCommonDivisor(numerator, denominator);
-                this.Denominator = denominator / GreatestCommonDivisor(numerator, denominator);
-            }
-                
+            this.Numerator = numerator;
+            this.Denominator = denominator;
+
+            ReduceFraction();
         }
 
         public Fraction Plus(Fraction fraction)
@@ -66,6 +59,16 @@ namespace TDDTestRun
         private int LeastCommonMultiple(int a, int b)
         {
             return a * b / GreatestCommonDivisor(a, b);
+        }
+
+        private void ReduceFraction()
+        {
+            if (this.Numerator != 0)
+            {
+                int greatestCommonDivisor = GreatestCommonDivisor(this.Numerator, this.Denominator);
+                this.Numerator /= greatestCommonDivisor;
+                this.Denominator /= greatestCommonDivisor;
+            }
         }
 
         public override bool Equals(object obj)
