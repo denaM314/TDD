@@ -2,8 +2,8 @@
 {
     public class Fraction
     {
-        private int Numerator;
-        private int Denominator;
+        public int Numerator { get; }
+        public int Denominator { get; }
 
         public Fraction(int numerator)
         {
@@ -20,17 +20,7 @@
 
         public Fraction Plus(Fraction fraction)
         {       
-            return new Fraction(fraction.GetNumerator() + this.Numerator, Denominator);
-        }
-
-        public int GetNumerator()
-        {
-            return Numerator;
-        }
-
-        public int GetDenominator()
-        {
-            return Denominator;
+            return new Fraction(fraction.Numerator + this.Numerator, Denominator);
         }
 
         public override bool Equals(object obj)
@@ -40,7 +30,7 @@
                 return false;
             
             Fraction fraction = (Fraction)obj;
-            return (fraction.GetNumerator() == this.Numerator) && (fraction.GetDenominator() == this.Denominator);
+            return (fraction.Numerator == this.Numerator) && (fraction.Denominator == this.Denominator);
         }
     }
 }
