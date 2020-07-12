@@ -9,7 +9,6 @@
         {
             Numerator = numerator;
             Denominator = 1;
-
         }
 
         public Fraction(int numerator, int denominator)
@@ -21,7 +20,7 @@
         public Fraction Plus(Fraction fraction)
         {
             if(this.Denominator == fraction.Denominator)
-                return new Fraction(fraction.Numerator + this.Numerator, Denominator);
+                return new Fraction(fraction.Numerator + this.Numerator, this.Denominator);
 
             int sumDenominator = this.Denominator * fraction.Denominator;
             int firstAddendNumerator = this.Numerator * fraction.Denominator;
