@@ -35,6 +35,10 @@
 
         public override bool Equals(object obj)
         {
+            //Check for null and compare run-time types.
+            if ((obj == null) || !this.GetType().Equals(obj.GetType()))
+                return false;
+            
             Fraction fraction = (Fraction)obj;
             return (fraction.GetNumerator() == this.Numerator) && (fraction.GetDenominator() == this.Denominator);
         }
