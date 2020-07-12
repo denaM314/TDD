@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Reflection;
 
 namespace TDDTestRun
 {
     public class Fraction
     {
-        public int Numerator { get; }
-        public int Denominator { get; }
+        public int Numerator { get; private set; }
+        public int Denominator { get; private set; }
 
         public Fraction(int numerator)
         {
@@ -15,8 +16,20 @@ namespace TDDTestRun
 
         public Fraction(int numerator, int denominator)
         {
-            Numerator = numerator;
-            Denominator = denominator;
+            if (denominator == 0)
+                throw new ArgumentOutOfRangeException("Cannot have zero as the denominator");
+
+            if (numerator == 0)
+            {
+                this.Numerator = numerator;
+                this.Denominator = denominator;
+            }
+            else
+            {
+                this.Numerator = numerator / GreatestCommonDivisor(numerator, denominator);
+                this.Denominator = denominator / GreatestCommonDivisor(numerator, denominator);
+            }
+                
         }
 
         public Fraction Plus(Fraction fraction)

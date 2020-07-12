@@ -72,5 +72,19 @@ namespace TDDTestRun_Tests
             var result = new Fraction(1, 2).Plus(new Fraction(3, 4));
             Assert.IsTrue(result.Equals(new Fraction(5, 4)));
         }
+
+        [Test]
+        public void FractionDenominatorsHaveCommonDivisorButAreNotMultiples()
+        {
+            var result = new Fraction(1, 4).Plus(new Fraction(1, 6));
+            Assert.IsTrue(result.Equals(new Fraction(5, 12)));
+        }
+
+        [Test]
+        public void FractionSumResult_Reduced()
+        {
+            var result = new Fraction(1, 3).Plus(new Fraction(3, 9));
+            Assert.IsTrue(result.Equals(new Fraction(2, 3)));
+        }
     }
 }
