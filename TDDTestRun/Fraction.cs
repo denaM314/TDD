@@ -2,21 +2,41 @@
 {
     public class Fraction
     {
-        private int value;
+        private int Numerator;
+        private int Denominator;
 
-        public Fraction(int v)
+        public Fraction(int numerator)
         {
-            this.value = v;
+            Numerator = numerator;
+            Denominator = 1;
+
+        }
+
+        public Fraction(int numerator, int denominator)
+        {
+            Numerator = numerator;
+            Denominator = denominator;
         }
 
         public Fraction Plus(Fraction fraction)
         {       
-            return new Fraction(fraction.IntValue() + this.IntValue());
+            return new Fraction(fraction.GetNumerator() + this.Numerator, Denominator);
         }
 
-        public int IntValue()
+        public int GetNumerator()
         {
-            return value;
+            return Numerator;
+        }
+
+        public int GetDenominator()
+        {
+            return Denominator;
+        }
+
+        public override bool Equals(object obj)
+        {
+            Fraction fraction = (Fraction)obj;
+            return (fraction.GetNumerator() == this.Numerator) && (fraction.GetDenominator() == this.Denominator);
         }
     }
 }
