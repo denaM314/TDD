@@ -19,8 +19,15 @@
         }
 
         public Fraction Plus(Fraction fraction)
-        {       
-            return new Fraction(fraction.Numerator + this.Numerator, Denominator);
+        {
+            if(this.Denominator == fraction.Denominator)
+                return new Fraction(fraction.Numerator + this.Numerator, Denominator);
+
+            int sumDenominator = this.Denominator * fraction.Denominator;
+            int firstAddendNumerator = this.Numerator * fraction.Denominator;
+            int secondAddendNumerator = fraction.Numerator * this.Denominator;
+
+            return new Fraction(firstAddendNumerator + secondAddendNumerator, sumDenominator);
         }
 
         public override bool Equals(object obj)
