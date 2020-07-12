@@ -81,10 +81,24 @@ namespace TDDTestRun_Tests
         }
 
         [Test]
-        public void FractionSumResult_Reduced()
+        public void FirstAddend_Reduced()
+        {
+            var result = new Fraction(2, 4).Plus(new Fraction(1, 3));
+            Assert.IsTrue(result.Equals(new Fraction(5, 6)));
+        }
+
+        [Test]
+        public void SecondAddend_Reduced()
         {
             var result = new Fraction(1, 3).Plus(new Fraction(3, 9));
             Assert.IsTrue(result.Equals(new Fraction(2, 3)));
+        }
+
+        [Test]
+        public void SumResult_Reduced()
+        {
+            var result = new Fraction(3, 5).Plus(new Fraction(2, 5));
+            Assert.IsTrue(result.Equals(new Fraction(1)));
         }
     }
 }
