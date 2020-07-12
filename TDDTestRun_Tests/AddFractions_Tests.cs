@@ -65,5 +65,12 @@ namespace TDDTestRun_Tests
             var result = new Fraction(1, 2).Plus(new Fraction(1, 3));
             Assert.IsTrue(result.Equals(new Fraction(5, 6)));
         }
+
+        [Test]
+        public void SecondAddendDenominatorIsMultipleOfFirstAddendDenominator_NonReducable()
+        {
+            var result = new Fraction(1, 2).Plus(new Fraction(3, 4));
+            Assert.IsTrue(result.Equals(new Fraction(5, 4)));
+        }
     }
 }
