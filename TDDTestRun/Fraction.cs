@@ -19,6 +19,12 @@ namespace TDDTestRun
             if (denominator == 0)
                 throw new ArgumentOutOfRangeException("Cannot have zero as the denominator");
 
+            if (denominator < 0)
+            {
+                numerator *= -1;
+                denominator *= -1;
+            }
+
             this.Numerator = numerator;
             this.Denominator = denominator;
 
@@ -37,7 +43,7 @@ namespace TDDTestRun
             return new Fraction(firstAddendNumerator + secondAddendNumerator, leastCommonDenominator);
         }
 
-        //Euclids GCM Algorithm
+        //Euclids GCD Algorithm
         private int GreatestCommonDivisor(int a, int b)
         {
             a = Math.Abs(a);

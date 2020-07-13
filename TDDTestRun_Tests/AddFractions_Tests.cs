@@ -135,5 +135,12 @@ namespace TDDTestRun_Tests
             var result = new Fraction(1, 3).Plus(new Fraction(-6, 9));
             Assert.IsTrue(result.Equals(new Fraction(-1, 3)));
         }
+
+        [Test]
+        public void SecondAddendNegativeDenominator_Reduced()
+        {
+            var result = new Fraction(1, 3).Plus(new Fraction(6, -9));
+            Assert.IsTrue(result.Equals(new Fraction(-1, 3)));
+        }
     }
 }
