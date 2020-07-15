@@ -21,7 +21,7 @@ namespace TDDTestRun_Tests
         public void FractionReducedOnCreation()
         {
             var result = new Fraction(2, 6);
-            Assert.IsTrue(result.Equals(new Fraction(1,3)));
+            Assert.AreEqual(new Fraction(1, 3), result);
         }
 
         [Test]

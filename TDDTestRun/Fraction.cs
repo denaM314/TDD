@@ -26,14 +26,14 @@ namespace TDDTestRun
             ReduceFraction();
         }
 
-        public Fraction Plus(Fraction fraction)
+        public Fraction Plus(Fraction that)
         {
             int firstAddendNumerator = this.Numerator;
-            int secondAddendNumerator = fraction.Numerator;
-            int leastCommonDenominator = LeastCommonMultiple(this.Denominator, fraction.Denominator);
+            int secondAddendNumerator = that.Numerator;
+            int leastCommonDenominator = LeastCommonMultiple(this.Denominator, that.Denominator);
 
             firstAddendNumerator *= (int)(leastCommonDenominator / this.Denominator);
-            secondAddendNumerator *= (int)(leastCommonDenominator / fraction.Denominator);
+            secondAddendNumerator *= (int)(leastCommonDenominator / that.Denominator);
 
             return new Fraction(firstAddendNumerator + secondAddendNumerator, leastCommonDenominator);
         }
@@ -80,6 +80,16 @@ namespace TDDTestRun
             
             Fraction fraction = (Fraction)obj;
             return (fraction.Numerator == this.Numerator) && (fraction.Denominator == this.Denominator);
+        }
+
+        public override int GetHashCode()
+        {
+            return Numerator*19 + Denominator;
+        }
+
+        public override string ToString()
+        {
+            return $"{Numerator}/{Denominator}";
         }
     }
 }
