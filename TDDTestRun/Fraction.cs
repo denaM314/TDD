@@ -70,6 +70,11 @@ namespace TDDTestRun
                 this.Numerator /= greatestCommonDivisor;
                 this.Denominator /= greatestCommonDivisor;
             }
+            else
+            {
+                this.Numerator = 0;
+                this.Denominator = 1;
+            }
         }
 
         public override bool Equals(object obj)
