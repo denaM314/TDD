@@ -38,6 +38,11 @@ namespace TDDTestRun
             return new Fraction(firstAddendNumerator + secondAddendNumerator, leastCommonDenominator);
         }
 
+        public Fraction Minus(Fraction that)
+        {
+            return this;
+        }
+
         //Euclids GCD Algorithm
         private int GreatestCommonDivisor(int a, int b)
         {
