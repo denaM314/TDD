@@ -1,0 +1,12 @@
+- The Goal
+- Getting Things Done
+- Implementing Lean Software Development: from Concept to Cash
+- Refactoring
+- Peopleware
+- Waltzing with Bears
+- Secrets of Consulting
+- Systems Thinking: A Primer
+- Complexity: A Guided Tour (Mitchell)
+- Refactoring Databases (not because of "database", but because of how to refactor specifically risky-to-refactor code)
+- Working Effectively with Legacy Code
+- Planning Extreme Programming
