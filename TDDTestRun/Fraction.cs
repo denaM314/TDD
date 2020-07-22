@@ -40,7 +40,14 @@ namespace TDDTestRun
 
         public Fraction Minus(Fraction that)
         {
-            return new Fraction (this.Numerator - that.Numerator);
+            int firstAddendNumerator = this.Numerator;
+            int secondAddendNumerator = that.Numerator;
+            int leastCommonDenominator = LeastCommonMultiple(this.Denominator, that.Denominator);
+
+            firstAddendNumerator *= (int)(leastCommonDenominator / this.Denominator);
+            secondAddendNumerator *= (int)(leastCommonDenominator / that.Denominator);
+
+            return new Fraction(firstAddendNumerator - secondAddendNumerator, leastCommonDenominator);
         }
 
         //Euclids GCD Algorithm
