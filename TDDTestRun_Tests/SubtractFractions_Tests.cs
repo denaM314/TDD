@@ -11,7 +11,7 @@ namespace TDDTestRun_Tests
     class SubtractFractions_Tests
     {
         [Test]
-        public void ZeroIntegers()
+        public void Zero_minus_zero()
         {
             var result = new Fraction(0).Minus(new Fraction(0));
             Assert.AreEqual(new Fraction(0), result);
@@ -22,6 +22,13 @@ namespace TDDTestRun_Tests
         {
             var result = new Fraction(2).Minus(new Fraction(0));
             Assert.AreEqual(new Fraction(2), result);
+        }
+
+        [Test]
+        public void Zero_minus_positive()
+        {
+            var result = new Fraction(0).Minus(new Fraction(1));
+            Assert.AreEqual(new Fraction(-1), result);
         }
     }
 }

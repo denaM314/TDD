@@ -40,7 +40,7 @@ namespace TDDTestRun
 
         public Fraction Minus(Fraction that)
         {
-            return this;
+            return new Fraction (this.Numerator - that.Numerator);
         }
 
         //Euclids GCD Algorithm
