@@ -41,8 +41,8 @@ namespace TDDTestRun_Tests
         [Test]
         public void Positive_minus_positive_greater_than_zero()
         {
-            var result = new Fraction(2, 3).Minus(new Fraction(1, 3));
-            Assert.AreEqual(new Fraction(1,3), result);
+            var result = new Fraction(3, 5).Minus(new Fraction(1, 3));
+            Assert.AreEqual(new Fraction(4,15), result);
         }
 
         [Test]
@@ -50,6 +50,13 @@ namespace TDDTestRun_Tests
         {
             var result = new Fraction(-2, 5).Minus(new Fraction(1, 5));
             Assert.AreEqual(new Fraction(-3, 5), result);
+        }
+
+        [Test]
+        public void Positive_minus_negative_equals_positive()
+        {
+            var result = new Fraction(3, 7).Minus(new Fraction(-1, 7));
+            Assert.AreEqual(new Fraction(4, 7), result);
         }
     }
 }
