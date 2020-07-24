@@ -52,7 +52,12 @@ namespace TDDTestRun
 
         public Fraction Negate()
         {
-            return new Fraction(-1);
+            if (this.Numerator == 0)
+                return this;
+            else
+            {
+                return new Fraction(this.Numerator * -1);
+            }
         }
         //Euclids GCD Algorithm
         private int GreatestCommonDivisor(int a, int b)
