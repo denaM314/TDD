@@ -30,5 +30,20 @@ namespace TDDTestRun_Tests
             var result = new Fraction(-8).Negate();
             Assert.AreEqual(new Fraction(8), result);
         }
+
+        [Test]
+        public void Negate_positive_fraction()
+        {
+            var result = new Fraction(1, 3).Negate();
+            Assert.AreEqual(new Fraction(-1, 3), result);
+        }
+
+        [Test]
+        public void Negate_negative_fraction()
+        {
+            var result = new Fraction(-3, 5).Negate();
+            Assert.AreEqual(new Fraction(3, 5), result);
+        }
     }
 }
+
