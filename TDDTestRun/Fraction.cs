@@ -47,23 +47,19 @@ namespace TDDTestRun
         {
             return new Fraction(this.Numerator * -1, this.Denominator);
         }
+
         //Euclids GCD Algorithm
         private int GreatestCommonDivisor(int a, int b)
         {
-            a = Math.Abs(a);
-            b = Math.Abs(b);
 
-            int x = a >= b ? a : b;
-            int y = a < b ? a : b;
-
-            while (true)
+            while (b != 0)
             {
-                int remainder = x % y;
-                if (remainder == 0)
-                    return y;
-                x = y;
-                y = remainder;
+                var temporary = b;
+                b = a % b;
+                a = temporary;
             }
+
+            return Math.Abs(a);
         }
 
         private int LeastCommonMultiple(int a, int b)
@@ -73,17 +69,9 @@ namespace TDDTestRun
 
         private void ReduceFraction()
         {
-            if (this.Numerator != 0)
-            {
-                int greatestCommonDivisor = GreatestCommonDivisor(this.Numerator, this.Denominator);
-                this.Numerator /= greatestCommonDivisor;
-                this.Denominator /= greatestCommonDivisor;
-            }
-            else
-            {
-                this.Numerator = 0;
-                this.Denominator = 1;
-            }
+            int greatestCommonDivisor = GreatestCommonDivisor(this.Numerator, this.Denominator);
+            this.Numerator /= greatestCommonDivisor;
+            this.Denominator /= greatestCommonDivisor;
         }
 
         public override bool Equals(object obj)
