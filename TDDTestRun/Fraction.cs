@@ -40,14 +40,7 @@ namespace TDDTestRun
 
         public Fraction Minus(Fraction that)
         {
-            int firstAddendNumerator = this.Numerator;
-            int secondAddendNumerator = that.Numerator;
-            int leastCommonDenominator = LeastCommonMultiple(this.Denominator, that.Denominator);
-
-            firstAddendNumerator *= (int)(leastCommonDenominator / this.Denominator);
-            secondAddendNumerator *= (int)(leastCommonDenominator / that.Denominator);
-
-            return new Fraction(firstAddendNumerator - secondAddendNumerator, leastCommonDenominator);
+            return this.Plus(that.Negate());
         }
 
         public Fraction Negate()
