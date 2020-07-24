@@ -28,14 +28,12 @@ namespace TDDTestRun
 
         public Fraction Plus(Fraction that)
         {
-            int firstAddendNumerator = this.Numerator;
-            int secondAddendNumerator = that.Numerator;
-            int leastCommonDenominator = LeastCommonMultiple(this.Denominator, that.Denominator);
+            int commonDenominator = this.Denominator * that.Denominator;
 
-            firstAddendNumerator *= (int)(leastCommonDenominator / this.Denominator);
-            secondAddendNumerator *= (int)(leastCommonDenominator / that.Denominator);
+            int firstAddendNumerator = (int) this.Numerator * (commonDenominator / this.Denominator);
+            int secondAddendNumerator = (int) that.Numerator * (commonDenominator / that.Denominator);
 
-            return new Fraction(firstAddendNumerator + secondAddendNumerator, leastCommonDenominator);
+            return new Fraction(firstAddendNumerator + secondAddendNumerator, commonDenominator);
         }
 
         public Fraction Minus(Fraction that)
@@ -51,7 +49,6 @@ namespace TDDTestRun
         //Euclids GCD Algorithm
         private int GreatestCommonDivisor(int a, int b)
         {
-
             while (b != 0)
             {
                 var temporary = b;
@@ -60,11 +57,6 @@ namespace TDDTestRun
             }
 
             return Math.Abs(a);
-        }
-
-        private int LeastCommonMultiple(int a, int b)
-        {
-            return a * b / GreatestCommonDivisor(a, b);
         }
 
         private void ReduceFraction()
