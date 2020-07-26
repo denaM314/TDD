@@ -47,5 +47,12 @@ namespace TDDTestRun_Tests
             var result = new Fraction(-4).MultipliedBy(new Fraction(-10));
             Assert.AreEqual(new Fraction(40), result);
         }
+
+        [Test]
+        public void Fraction_multiplied_by_a_fraction()
+        {
+            var result = new Fraction(1,3).MultipliedBy(new Fraction(2,5));
+            Assert.AreEqual(new Fraction(2,15), result);
+        }
     }
 }

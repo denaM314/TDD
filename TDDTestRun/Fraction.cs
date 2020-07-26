@@ -43,7 +43,7 @@ namespace TDDTestRun
 
         public Fraction MultipliedBy(Fraction that)
         {
-            return new Fraction(this.Numerator * that.Numerator);
+            return new Fraction(this.Numerator * that.Numerator, this.Denominator * that.Denominator);
         }
 
         public Fraction Negate()
