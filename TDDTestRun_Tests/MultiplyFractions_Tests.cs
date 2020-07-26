@@ -33,5 +33,19 @@ namespace TDDTestRun_Tests
             var result = new Fraction(3).MultipliedBy(new Fraction(6));
             Assert.AreEqual(new Fraction(18), result);
         }
+
+        [Test]
+        public void Integer_multiplied_by_negative_integer()
+        {
+            var result = new Fraction(2).MultipliedBy(new Fraction(-5));
+            Assert.AreEqual(new Fraction(-10), result);
+        }
+
+        [Test]
+        public void Negative_integer_multiplied_by_negative_integer()
+        {
+            var result = new Fraction(-4).MultipliedBy(new Fraction(-10));
+            Assert.AreEqual(new Fraction(40), result);
+        }
     }
 }
