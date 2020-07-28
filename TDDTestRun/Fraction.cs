@@ -46,6 +46,11 @@ namespace TDDTestRun
             return new Fraction(this.Numerator * that.Numerator, this.Denominator * that.Denominator);
         }
 
+        public Fraction DividedBy(Fraction fraction)
+        {
+            return this;
+        }
+
         public Fraction Negate()
         {
             return new Fraction(this.Numerator * -1, this.Denominator);
