@@ -11,5 +11,12 @@ namespace TDDTestRun_Tests
             var result = new Fraction(1).DividedBy(new Fraction(1));
             Assert.AreEqual(new Fraction(1), result);
         }
+
+        [Test]
+        public void integer_dividedby_integer()
+        {
+            var result = new Fraction(6).DividedBy(new Fraction(3));
+            Assert.AreEqual(new Fraction(2), result);
+        }
     }
 }
