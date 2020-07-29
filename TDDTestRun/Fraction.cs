@@ -48,7 +48,10 @@ namespace TDDTestRun
 
         public Fraction DividedBy(Fraction that)
         {
-            return new Fraction(this.Numerator, that.Numerator);
+            if (that.Numerator == 0)
+                throw new InvalidOperationException("Cannot divide fraction by zero.");
+
+            return new Fraction(this.Numerator * that.Denominator, that.Numerator * this.Denominator);
         }
 
         public Fraction Negate()
